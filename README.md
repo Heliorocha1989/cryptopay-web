@@ -2,7 +2,7 @@
 
 Este projeto é um backend em Node.js com Express e PostgreSQL para cadastro, autenticação de usuários e operações de carteira digital (saldo, depósito, transferência, pagamento e histórico de transações).
 
-## Como rodar
+## Como rodar o backend
 
 1. **Instale as dependências:**
    ```bash
@@ -24,7 +24,7 @@ Este projeto é um backend em Node.js com Express e PostgreSQL para cadastro, au
    node index.js
    ```
 
-## Rotas principais
+## Rotas principais do backend
 
 - `POST /api/user/register` — Cadastro de usuário
 - `POST /api/user/login` — Login de usuário
@@ -34,6 +34,20 @@ Este projeto é um backend em Node.js com Express e PostgreSQL para cadastro, au
 - `POST /api/pagamento` — Pagamento
 - `GET /api/historico` — Histórico de transações
 
+## Frontend
+
+O frontend está na pasta `frontend/` e permite que o usuário interaja com todas as funcionalidades do sistema de carteira digital de forma visual e intuitiva.
+
+### Estrutura dos arquivos:
+- `frontend/index.html` — Página principal com telas de login, cadastro, saldo, transações, etc.
+- `frontend/scripts.js` — Lógica de integração com o backend via fetch, manipulação de telas e formulários.
+- `frontend/styles.css` — Estilos visuais da aplicação.
+
+### Como usar o frontend
+1. Com o backend rodando, abra o arquivo `frontend/index.html` no seu navegador.
+2. Faça cadastro, login e utilize todas as funções (saldo, depósito, transferência, pagamento, histórico).
+3. Todas as operações são integradas ao backend via API REST.
+
 ## Observações
 - Use boas práticas de segurança: nunca exponha seu JWT_SECRET ou dados sensíveis.
 - O projeto utiliza SQL seguro (prepared statements) para evitar SQL Injection.
@@ -42,6 +56,7 @@ Este projeto é um backend em Node.js com Express e PostgreSQL para cadastro, au
 ## Requisitos
 - Node.js
 - PostgreSQL
+- Navegador web para o frontend
 
 ---
 
