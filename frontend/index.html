@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPay Web - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="register-screen">
+        <h2>Cadastro</h2>
+        <input type="text" id="registerId" placeholder="ID do Usuário">
+        <input type="text" id="registerUsername" placeholder="Nome do Usuário">
+        <input type="text" id="registerBankCode" placeholder="Código do Banco">
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="showLogin()">Já tenho conta</button>
+        <p id="registerMessage"></p>
+    </div>
+
+    <div id="login-screen" style="display:none;">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Nome do Usuário">
+        <input type="text" id="userId" placeholder="ID do Usuário">
+        <input type="text" id="bankCode" placeholder="Código do Banco">
+        <button onclick="login()">Entrar</button>
+        <button onclick="showRegister()">Cadastrar</button>
+    </div>
+
+    <div id="main-app" style="display:none;">
+        <h2>CryptoPay Web</h2>
+        <p>Bem-vindo, <span id="userDisplay"></span>!</p>
+        <p>Saldo: <span id="saldo">0</span> USD</p>
+        
+        <h3>Depositar Fundos</h3>
+        <input type="number" id="depositValue" placeholder="Valor em USD">
+        <button onclick="depositar()">Depositar</button>
+
+        <h3>Converter e Pagar</h3>
+        <input type="number" id="usdValue" placeholder="Valor em USD">
+        <select id="cryptoSelect">
+            <option value="bitcoin">Bitcoin (BTC)</option>
+            <option value="ethereum">Ethereum (ETH)</option>
+        </select>
+        <button onclick="converter()">Converter</button>
+        <p id="convertedResult"></p>
+        <button onclick="simularPagamento()">Pagar</button>
+        <button onclick="transferir()">Transferir</button>
+
+        <p id="mensagem"></p>
+        <div id="historico"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
